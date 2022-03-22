@@ -7,13 +7,21 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
+@keyframes logo{
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .logo{
     z-index: 2;
     justify-content: flex-start;
     margin-left: 32px;
     font-weight: 600;
     font-size: larger;
-}   
+}
+.logo:hover svg{
+    animation: logo 0.5s;
+}
 nav{
     z-index: 1;
     position: fixed;
