@@ -61,6 +61,7 @@ nav{
 }
 .responsive{
     border: none;
+    background:none;
     cursor: pointer;
 }
 .responsive span{
