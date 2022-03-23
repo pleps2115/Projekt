@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #283747;
     color: aliceblue;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
@@ -100,4 +99,13 @@ nav{
 .background{
     position: relative;
     z-index: 0;
+}
+.introduce{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    text-align: center;
+    font-size: xx-large;
 }
