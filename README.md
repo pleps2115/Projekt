@@ -1,4 +1,4 @@
 # Extensioner
-The best Visual Studio Code extensions website.
-No generalnie dobrze jest, chłopaki dobrze robią, znają się na robocie, pozdrawiam całą Legnicę.
+The best Visual Studio Code extensions website
+no jest wszystko w porządku jest dobrze dobrze robią dobrze wszystko jest w porządku jest git pozdrawiam cala legnice dobrych chlopakow
 Kacper i Mikołaj
