@@ -40,12 +40,12 @@ nav{
 }
 
 .menu{
-    display: none;
+    display: flex;
     flex: 1 1 0%;
     justify-content: flex-end;
     margin: 0 -16px;
 }
-.menu a{
+.menu div a{
     margin: 0 16px;
     font-weight: 600;
     transition: 0.4s;
@@ -60,41 +60,48 @@ nav{
     background-color: #6f42c1;
 }
 .responsive{
-    border: none;
-    background:none;
-    cursor: pointer;
+    display: none;
 }
-.responsive span{
-    display: block;
-    width: 33px;
-    height: 4px;
-    position: relative;
-    margin-bottom: 5px;
-    background-color: aliceblue;
-    border-radius: 6px;
-    transform-origin: 0 0;
-    transition: 0.4s;
-}
-.responsive:hover span:nth-child(2){
-    transform: translateX(10px);
-    background-color: #6f42c1;
-}
-.responsive:focus span:nth-child(1){
-    transform: translate(0px, -2px) rotate(45deg);
-}
-.responsive:focus span:nth-child(2){
-    opacity: 0;
-    transform: translateX(15px);
-}
-.responsive:focus span:nth-child(3){
-    transform: translate(-3px, 3px) rotate(-45deg);
-}
-@media (min-width:992px){
+@media (max-width:992px){
     .responsive{
-        display: none;
+        display: block;
+        border: none;
+        background:none;
+        cursor: pointer;
+    }
+    .responsive span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        position: relative;
+        margin-bottom: 5px;
+        background-color: aliceblue;
+        border-radius: 6px;
+        transform-origin: 0 0;
+        transition: 0.4s;
+    }
+    .responsive:hover span:nth-child(2){
+        transform: translateX(10px);
+        background-color: #6f42c1;
     }
     .menu{
-        display: flex;
+        display: block;
+        position: fixed;
+        top: 65px;
+        width: 30%;
+        height: 100%;
+        right: -100%;
+        text-align: center;
+        justify-content: center;
+        background-color: #6f42c1;
+        transition: all 1s;
+    }
+    .menu div{
+        display: block;
+        padding: 30px;
+    }
+    button:focus + .menu{
+        right: 0;
     }
 }
 .background{
