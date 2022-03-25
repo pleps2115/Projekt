@@ -7,6 +7,9 @@
     font-weight: 600;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 @keyframes logo-processor-animation{
     100%{
         transform: rotate(360deg);
@@ -70,8 +73,9 @@ nav{
     left: 50%;
     top: 30%;
     transform: translate(-50%,-50%);
+    margin: auto;
     text-align: center;
-    font-size: x-large;
+    font-size:1.2vw;
     font-weight:lighter;
 }
 .background div:nth-child(2), .background div:nth-child(3){
