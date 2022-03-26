@@ -212,36 +212,3 @@ input[type="checkbox"]{
         padding: 0;
     }
 }
-@media(max-width:500px){
-    
-    nav ul.menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        align-items: center;
-        margin: 0;
-        border-radius: 0;
-        padding: 0;
-        left: 0;
-    }
-    main{
-        display: none;
-    }
-    footer{
-        display: none;
-    }
-    .responsive{
-        display: none;
-    }
-    .active{
-        display: none;
-    }
-    .logo{
-        left: 50%;
-    }
-    .container{
-        justify-content: center;
-    }
-
-}
