@@ -72,7 +72,6 @@ nav ul li a{
     display: block;
 }
 ul ul{
-    
     position: absolute;
     display: none;
     top: 35px;
@@ -86,7 +85,6 @@ nav ul ul li{
     display: list-item;
     text-decoration: none;
     position: relative;
-    
 }
 .responsive{
     display: none;
@@ -96,12 +94,7 @@ nav ul ul li{
     display: flex;
     justify-content: center;
 }
-.wideo{
-    z-index: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
-.content{
+/* .content{
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -111,8 +104,8 @@ nav ul ul li{
     position: absolute;
     top: 50%;
     font-weight:lighter;
-}
-.przyciski{
+} */
+/* .przyciski{
     
     display: flex;
     gap: 10px;
@@ -129,11 +122,57 @@ nav ul ul li{
 footer{
     background-color: dodgerblue;
     height: auto;
-}
+}*/
 input[type="checkbox"]{
     display: none;
 }
-@media (max-width:1024px){
+.background{
+    position: relative;
+    z-index: 0;
+    height: 1070px;
+}
+.background h3{
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    text-align: center;
+    font-size:1.2vw;
+    font-weight:lighter;
+}
+.background div:nth-child(2), .background div:nth-child(3){
+    z-index: 1;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 16%;
+    padding: 10px;
+    font-size: x-large;
+    font-weight:lighter;
+    text-align: center;
+    border-radius: 99px;
+    cursor: pointer;
+}
+.background div:nth-child(2){
+    left: 40%;
+    top: 40%;
+    background-color: #6f42c1;
+    border: 3px solid #6f42c1;
+}
+.background div:nth-child(3){
+    left: 60%;
+    top: 40%;
+    border: 3px solid aliceblue;
+}
+.contact{
+    z-index: 99;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background-color: #34495E;
+}
+@media (max-width:1378px){
     .responsive{
         display: block;
         border: none;
@@ -180,7 +219,7 @@ input[type="checkbox"]{
         left: 0;
     }
     nav ul ul li{
-       font-size: smaller;
+        font-size: smaller;
     }
     nav ul li:hover > ul{
         display: none;
@@ -192,22 +231,22 @@ input[type="checkbox"]{
     #html-button:checked~ul{
         display: block;
     }
-    #CSS-button:checked~ul{
+    #css-button:checked~ul{
         display: block;
     }
-    #JS-button:checked~ul{
+    #js-button:checked~ul{
         display: block;
     }
-    #PHP-button:checked~ul{
+    #php-button:checked~ul{
         display: block;
     }
-    #PYTHON-button:checked~ul{
+    #python-button:checked~ul{
         display: block;
     }
-    #UNISEX-button:checked~ul{
+    #universal-button:checked~ul{
         display: block;
     }
-     ul.under-main li{
+    ul.under-main li{
         transform: scale(0.6);
         padding: 0;
     }
