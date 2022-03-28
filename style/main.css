@@ -10,11 +10,20 @@
 }
 html{
     scroll-behavior: smooth;
+    min-height: 100%;
+}
+body{
+    background-color: dodgerblue;
 }
 @keyframes logo-processor-animation{
     100%{
         transform: rotate(360deg);
     }
+}
+main{
+    width: 100%;
+    min-height: 92vh;
+    background-color: grey;
 }
 nav{
     z-index: 2;
@@ -25,9 +34,10 @@ nav{
     padding: 16px 32px;
     background-color: #34495E;
 }
-.logo{
+.responsive{
     z-index: 4;
-    justify-content: flex-start;
+}
+.logo{
     margin-left: 32px;
     font-size: larger;
 }
@@ -88,7 +98,7 @@ nav ul ul li{
     position: relative;
     
 }
-.responsive{
+.menu-button{
     display: none;
 }
 .background{
@@ -97,6 +107,7 @@ nav ul ul li{
     justify-content: center;
 }
 .wideo{
+    position: static;
     z-index: 0;
     min-width: 100%;
     min-height: 100%;
@@ -106,10 +117,11 @@ nav ul ul li{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 10%;
     flex-wrap: wrap;
     text-align: center;
-    position: absolute;
-    top: 50%;
+    position:absolute;
     font-weight:lighter;
 }
 .przyciski{
@@ -128,19 +140,45 @@ nav ul ul li{
 }
 footer{
     background-color: dodgerblue;
-    height: auto;
+    position: static;
+    margin-bottom: 0;
+    bottom: 0;
 }
 input[type="checkbox"]{
     display: none;
 }
+@media(max-width:600px){
+    nav ul li{
+        transform: scale(0.4);
+    }
+    nav ul li.main:hover{
+        transform: scale(0.66);
+    }
+    .content{
+        font-size: 10px;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+}
 @media (max-width:1024px){
-    .responsive{
+    .container{
         display: block;
+        position: relative;
+    }
+    .responsive{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         border: none;
         background:none;
         cursor: pointer;
     }
-    .responsive span{
+    .menu-button{
+        display:block;
+    }
+    .responsive p{
         display: block;
         position: relative;
         width: 33px;
@@ -151,46 +189,45 @@ input[type="checkbox"]{
         transform-origin: 0 0;
         transition: 0.4s;
     }
-    .responsive:hover span:nth-child(2){
+    .responsive:hover p:nth-child(2){
         transform: translateX(10px);
         background-color: #6f42c1;
     }
-    nav ul{
-        position: absolute;
-        display:block;
-        width: fit-content;
-        height:fit-content;
-        top: 61px;
-        left: -100%;
+   nav ul{
+        display: none;
+        position: static;
+        width: 100%;
         background-color: #6f42c1;
         transition: all 1s;
-        border-radius: 5px;
+        border-radius: 0px;
+        margin: 0;
+        
     }
     nav ul li {
         display: block;
+        padding: 0;
     }
     #menu-button:checked ~ ul{
-        left: 0;
+        display: block;
     }
     ul ul{
         display: none;
         position:static;
-        width: auto;
+        width: fit-content;
+        height: fit-content;
         top: 0;
         left: 0;
     }
     nav ul ul li{
        font-size: smaller;
+       margin: 0;
+       position: static;
     }
     nav ul li:hover > ul{
         display: none;
     }
-    nav ul li.main:hover{
-        background-color: transparent;
-        transform: scale(1.05);
-    }
     #html-button:checked~ul{
-        display: block;
+        display: list-item;
     }
     #CSS-button:checked~ul{
         display: block;
@@ -207,8 +244,9 @@ input[type="checkbox"]{
     #UNISEX-button:checked~ul{
         display: block;
     }
-     ul.under-main li{
-        transform: scale(0.6);
-        padding: 0;
+    nav ul li.main:hover{
+        transform: scale(1);
+        background-color: transparent;
     }
 }
+
