@@ -20,10 +20,16 @@ body{
         transform: rotate(360deg);
     }
 }
+
 main{
     width: 100%;
     min-height: 92vh;
     background-color: grey;
+}
+footer{
+    background-color: dodgerblue;
+    position: static;
+    min-height: 3vh;
 }
 nav{
     z-index: 2;
@@ -138,12 +144,7 @@ nav ul ul li{
     border: 3px solid #6f42c1;
     
 }
-footer{
-    background-color: dodgerblue;
-    position: static;
-    margin-bottom: 0;
-    bottom: 0;
-}
+
 input[type="checkbox"]{
     display: none;
 }
