@@ -148,21 +148,6 @@ nav ul ul li{
 input[type="checkbox"]{
     display: none;
 }
-@media(max-width:600px){
-    nav ul li{
-        transform: scale(0.4);
-    }
-    nav ul li.main:hover{
-        transform: scale(0.66);
-    }
-    .content{
-        font-size: 10px;
-    }
-
-    .logo{
-        margin-left: 10px;
-    }
-}
 @media (max-width:1024px){
     .container{
         display: block;
@@ -199,9 +184,9 @@ input[type="checkbox"]{
         position: static;
         width: 100%;
         background-color: #6f42c1;
-        transition: all 1s;
-        border-radius: 0px;
         margin: 0;
+        border-radius: 10px;
+        padding-bottom: 4px;
         
     }
     nav ul li {
@@ -227,27 +212,38 @@ input[type="checkbox"]{
     nav ul li:hover > ul{
         display: none;
     }
-    #html-button:checked~ul{
-        display: list-item;
-    }
-    #CSS-button:checked~ul{
-        display: block;
-    }
-    #JS-button:checked~ul{
-        display: block;
-    }
-    #PHP-button:checked~ul{
-        display: block;
-    }
-    #PYTHON-button:checked~ul{
-        display: block;
-    }
-    #UNISEX-button:checked~ul{
+    input[name="button"]:checked~ ul{
         display: block;
     }
     nav ul li.main:hover{
-        transform: scale(1);
+        transform: scale(1.05);
         background-color: transparent;
+       
+    }
+    nav ul ul li{
+        font-size: x-small;
+        padding: 1px;
+    }
+}
+@media(max-width:600px){
+    
+    nav ul li{
+        font-size: x-small;
+    }
+    nav ul li.main:hover{
+        transform: scale(1.02);
+        
+    }
+    .content{
+        font-size: 10px;
+    }
+
+    .logo{
+        margin-left: 10px;
+    }
+    nav ul ul li{
+        font-size: 7px;
+        padding: 1px;
     }
 }
 
