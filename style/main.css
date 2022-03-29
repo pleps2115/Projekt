@@ -20,10 +20,13 @@ body{
         transform: rotate(360deg);
     }
 }
+header{
+    height: 100%;
+}
 
 main{
     width: 100%;
-    min-height: 92vh;
+    min-height: 91vh;
     background-color: grey;
 }
 footer{
@@ -93,7 +96,7 @@ ul ul{
     display: none;
     top: 35px;
     border-radius: 10px;
-    width: 150px;
+    width: fit-content;
 }
 nav ul li:hover > ul{
     display: block;
@@ -148,7 +151,14 @@ nav ul ul li{
 input[type="checkbox"]{
     display: none;
 }
-@media (max-width:1024px){
+@media (max-width:1500px){
+    
+    nav ul li{
+        font-size: small;
+        width: fit-content;
+    }
+}
+@media (max-width:990px){
     .container{
         display: block;
         position: relative;
@@ -244,6 +254,11 @@ input[type="checkbox"]{
     nav ul ul li{
         font-size: 7px;
         padding: 1px;
+    }
+}
+@media only screen  and (max-device-width:1500px){
+    .wideo{
+        display: none;
     }
 }
 
