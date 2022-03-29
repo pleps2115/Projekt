@@ -37,9 +37,6 @@ footer{
 nav{
     z-index: 2;
     position:relative;
-    top: 0;
-    left: 0;
-    right: 0;
     padding: 16px 32px;
     background-color: #34495E;
 }
@@ -64,9 +61,7 @@ nav ul{
     display: flex;
     flex: 1 1 0%;
     justify-content: flex-end;
-    margin: 0 -16px;
     background-color: #34495E;;
-    width: 720px;
     flex-wrap: wrap;
 }
 nav ul li{
@@ -87,11 +82,7 @@ nav ul li.main:hover{
 .active{
     background-color: #6f42c1;
 }
-nav ul li a{
-    display: block;
-}
 ul ul{
-    
     position: absolute;
     display: none;
     top: 35px;
@@ -109,6 +100,7 @@ nav ul ul li{
 }
 .menu-button{
     display: none;
+    cursor: pointer;
 }
 .background{
     position: static;
@@ -167,9 +159,7 @@ input[type="checkbox"]{
         display:flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        border: none;
-        background:none;
-        cursor: pointer;
+        margin-bottom: 5px;
     }
     .menu-button{
         display:block;
@@ -211,8 +201,6 @@ input[type="checkbox"]{
         position:static;
         width: fit-content;
         height: fit-content;
-        top: 0;
-        left: 0;
     }
     nav ul ul li{
        font-size: smaller;
