@@ -17,6 +17,7 @@ body{
 }
 @keyframes logo-processor-animation{
     100%{
+        
         transform: rotate(360deg);
     }
 }
@@ -46,9 +47,15 @@ nav{
 .logo{
     margin-left: 32px;
     font-size: x-large;
+    
+}
+.logo svg{
+    width: 0.7cm;
+    height:0.7cm;
 }
 .logo:hover svg{
     animation: logo-processor-animation 0.5s;
+    
 }
 
 .container{
@@ -107,12 +114,6 @@ nav ul ul li{
     display: flex;
     justify-content: center;
 }
-.wideo{
-    position: static;
-    z-index: 0;
-    min-width: 100%;
-    min-height: 100%;
-}
 .content{
     z-index: 1;
     display: flex;
@@ -144,6 +145,10 @@ input[type="checkbox"]{
     display: none;
 }
 @media (max-width:1500px){
+    .logo svg{
+        width: 0.5cm;
+        height:0.5cm;
+    }
     .logo{
         margin-left: 32px;
         font-size: large;
@@ -152,6 +157,7 @@ input[type="checkbox"]{
         font-size: small;
         width: fit-content;
     }
+    
 }
 @media (max-width:1079px){
     .container{
@@ -227,7 +233,10 @@ input[type="checkbox"]{
     }
 }
 @media(max-width:600px){
-    
+    .logo svg{
+        width: 0.4cm;
+        height:0.4cm;
+    }
     nav ul li{
         font-size: x-small;
     }
@@ -245,11 +254,6 @@ input[type="checkbox"]{
     nav ul ul li{
         font-size: 7px;
         padding: 1px;
-    }
-}
-@media only screen  and (max-device-width:1500px){
-    .wideo{
-        display: none;
     }
 }
 
